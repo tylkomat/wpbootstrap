@@ -69,7 +69,7 @@
 		    <a class="btn small" style="position: absolute; top: -45px; left: 0px" href="<?php echo $sa_settings['back_to_main']; ?>">&laquo; go to the main website</a>
 				<?php endif; ?>
 		
-				<h1 temprop="name">
+				<h1 itemprop="name">
 					<a href="<?php echo home_url( '/' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				</h1>
 				<p itemprop="description"><?php bloginfo( 'description' ); ?></p>
