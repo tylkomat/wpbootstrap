@@ -27,9 +27,7 @@
 <?php /* If there are no posts to display, such as an empty archive page */ ?>
 <?php if ( ! have_posts() ) : ?>
 		
-		<div class="page-header">
-			<h1><?php _e( 'Not Found', 'twentyten' ); ?></h1>
-		</div>
+		<h1 class="page-header"><?php _e( 'Not Found', 'twentyten' ); ?></h1>
 		
 		<div class="alert-message block-message error">
 			<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'twentyten' ); ?></p>
@@ -73,21 +71,17 @@ if ( ( is_paged() == false && $sa_settings['compact_homepage'] == '1' ) || ( $sa
 				if ( $firstpost == '1' ) :
 			?>
 	<article>
-				<div class="page-header">
-					<h1>
-						<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
-					</h1>
-				</div> <!-- /page-header -->
+				<h1 class="page-header">
+					<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+				</h1>
 			<?php endif; ?>
 
 			<?php
 				if ( $firstpost == '' ) :
 			?>
-				<div class="page-header" style="margin-top: 50px;">
-					<h2>
-						<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
-					</h2>
-				</div> <!-- /page-header -->
+				<h2 class="page-header" style="margin-top: 50px;">
+					<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+				</h2>
 			<?php endif; ?>
 	
 			<p class="muted">
@@ -101,14 +95,14 @@ if ( ( is_paged() == false && $sa_settings['compact_homepage'] == '1' ) || ( $sa
 				if ( $firstpost == '1' ) :
 			?>
 			
-			<div class="post_content">
+			<article class="post_content" itemscope itemType="http://schema.org/BlogPosting">
 				<?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
 						<?php the_excerpt(); ?>
 				<?php else : ?>
 						<?php the_content( __( 'Continue reading &rarr;', 'twentyten' ) ); ?>
 						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
 				<?php endif; ?>
-			</div>
+			</article>
 
 			<p class="muted">
 				<?php twentyten_posted_on(); ?>

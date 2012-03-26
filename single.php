@@ -9,28 +9,29 @@
 
 get_header(); ?>
 
-<div class="row">
-  <div class="span11 columns">
+<section class="row" itemprop="blogPosts">
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-	<article>
-					<div class="page-header">
-						<h1>
-							<?php the_title(); ?>
-						</h1>
-					</div> <!-- /page-header -->
+	
+  		<article class="span11 columns" itemscope itemtype="http://schema.org/BlogPosting">
+			<header>
+					<h1 class="page-header" itemprop="name">
+						<?php the_title(); ?>
+					</h1>
 					<p class="muted">
 						<?php twentyten_posted_on(); ?>
 					</p>
 					
 					<hr />
+			</header>
 		
-					<div class="post_content">
+					<section class="post_content" itemprop="articleBody">
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
 
-					</div>
+					</section>
 
+			<footer>
 				<p class="muted">
 					<?php twentyten_posted_on(); ?>
 						|
@@ -57,14 +58,12 @@ get_header(); ?>
 						</div>
 					<?php endif; ?>
 
-
+			</footer>
 
 
 					<?php 
 						global $sa_options;
 						$sa_settings = get_option( 'sa_options', $sa_options );
-					?>
-					<?php
 						if( $sa_settings['social_buttons'] == '1' ) : 
 					?>
 				<div class="well clearfix">
@@ -98,10 +97,10 @@ get_header(); ?>
 
 <?php endwhile; // end of the loop. ?>
 
-  </div>
-  <div class="span5 columns">
+  <aside class="span5 columns">
 		<?php get_sidebar(); ?>
-  </div>
-</div>
+  </aside>
+
+</section>
 
 <?php get_footer(); ?>

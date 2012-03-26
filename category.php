@@ -9,14 +9,12 @@
 
 get_header(); ?>
 
-<div class="row">
-  <div class="span11 columns">
+<section class="row">
+  <article class="span11 columns">
 
-			<div class="page-header">
-				<h1><?php
-					printf( __( 'Category Archives: %s', 'twentyten' ), '' . single_cat_title( '', false ) . '' );
-				?></h1>
-			</div> <!-- /page-header -->
+			<h1 class="page-header"><?php
+				printf( __( 'Category Archives: %s', 'twentyten' ), '' . single_cat_title( '', false ) . '' );
+			?></h1>
 
 				<?php
 					$category_description = category_description();
@@ -30,9 +28,9 @@ get_header(); ?>
 				get_template_part( 'loop', 'category' );
 				?>
 
-  </div>
-  <div class="span5 columns">
+  </article>
+  <aside class="span5 columns">
 		<?php get_sidebar(); ?>
-  </div>
-</div>
+  </aside>
+</section>
 <?php get_footer(); ?>

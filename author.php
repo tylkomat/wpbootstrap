@@ -21,12 +21,10 @@ get_header(); ?>
 		the_post();
 ?>
 
-<div class="row">
-  <div class="span11 columns">
+<section class="row">
+  <article class="span11 columns">
 
-			<div class="page-header">
-				<h1><?php printf( __( 'Author Archives: %s', 'twentyten' ), "<a class='url fn n' href='" . get_author_posts_url( get_the_author_meta( 'ID' ) ) . "' title='" . esc_attr( get_the_author() ) . "' rel='me'>" . get_the_author() . "</a>" ); ?></h1>
-			</div> <!-- /page-header -->
+	<h1 class="page-header"><?php printf( __( 'Author Archives: %s', 'twentyten' ), "<a class='url fn n' href='" . get_author_posts_url( get_the_author_meta( 'ID' ) ) . "' title='" . esc_attr( get_the_author() ) . "' rel='me'>" . get_the_author() . "</a>" ); ?></h1>
 
 <?php
 // If a user has filled out their description, show a bio on their entries.
@@ -52,9 +50,9 @@ if ( get_the_author_meta( 'description' ) ) : ?>
 	 get_template_part( 'loop', 'author' );
 ?>
 
-  </div>
-  <div class="span5 columns">
+  </article>
+  <aside class="span5 columns">
 		<?php get_sidebar(); ?>
-  </div>
-</div>
+  </aside>
+</section>
 <?php get_footer(); ?>

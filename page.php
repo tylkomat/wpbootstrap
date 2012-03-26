@@ -14,22 +14,20 @@
 
 get_header(); ?>
 
-<div class="row">
-  <div class="span11 columns">
+<section class="row">
+  <article class="span11 columns">
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-					<div class="page-header">
 					<?php if ( is_front_page() ) { ?>
-						<h2><?php the_title(); ?></h2>
+						<h2 class="page-header"><?php the_title(); ?></h2>
 					<?php } else { ?>	
-						<h1><?php the_title(); ?></h1>
+						<h1 class="page-header"><?php the_title(); ?></h1>
 					<?php } ?>				
-					</div> <!-- /page-header -->
 					
-					<div class="post_content">
+					<article class="post_content" itemscope itemType="http://schema.org/BlogPosting">
 						<?php the_content(); ?>
-					</div> <!-- /post_content -->
+					</article> <!-- /post_content -->
 
 						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
 						<?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
@@ -41,9 +39,9 @@ get_header(); ?>
 
 <?php endwhile; ?>
 
-  </div>
-  <div class="span5 columns">
+  </article>
+  <aside class="span5 columns">
 		<?php get_sidebar(); ?>
-  </div>
-</div>
+  </aside>
+</section>
 <?php get_footer(); ?>

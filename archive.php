@@ -25,11 +25,10 @@ get_header(); ?>
 		the_post();
 ?>
 
-<div class="row">
-  <div class="span11 columns">
+<section class="row">
+  <article class="span11 columns">
 
-			<div class="page-header">
-				<h1>
+				<h1 class="page-header">
 	<?php if ( is_day() ) : ?>
 					<?php printf( __( 'Daily Archives: %s', 'twentyten' ), get_the_date() ); ?>
 	<?php elseif ( is_month() ) : ?>
@@ -40,7 +39,7 @@ get_header(); ?>
 					<?php _e( 'Blog Archives', 'twentyten' ); ?>
 	<?php endif; ?>
 				</h1>
-			</div> <!-- /page-header -->
+
 
 <?php
 	/* Since we called the_post() above, we need to
@@ -56,9 +55,9 @@ get_header(); ?>
 	 get_template_part( 'loop', 'archive' );
 ?>
 
-  </div>
-  <div class="span5 columns">
+  </article>
+  <aside class="span5 columns">
 		<?php get_sidebar(); ?>
-  </div>
-</div>
+  </aside>
+</section>
 <?php get_footer(); ?>

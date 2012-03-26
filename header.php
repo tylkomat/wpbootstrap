@@ -54,11 +54,11 @@
 
 <body <?php body_class(); ?>>
 
-    <div class="container">
+    <div class="container" itemscope itemtype="http://schema.org/Blog">
 
 			
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit" style="position: relative">
+		<!-- Main hero unit for a primary marketing message or call to action -->
+		<header class="hero-unit" style="position: relative">
 				<?php 
 					global $sa_options;
 					$sa_settings = get_option( 'sa_options', $sa_options );
@@ -66,27 +66,26 @@
 				<?php
 					if( $sa_settings['back_to_main'] != '' ) : 
 				?>
-	  	    <a class="btn small" style="position: absolute; top: -45px; left: 0px" href="<?php echo $sa_settings['back_to_main']; ?>">&laquo; go to the main website</a>
+		    <a class="btn small" style="position: absolute; top: -45px; left: 0px" href="<?php echo $sa_settings['back_to_main']; ?>">&laquo; go to the main website</a>
 				<?php endif; ?>
 		
-				<h1>
+				<h1 temprop="name">
 					<a href="<?php echo home_url( '/' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				</h1>
-				<p><?php bloginfo( 'description' ); ?></p>
-      </div>
+				<p itemprop="description"><?php bloginfo( 'description' ); ?></p>
+		</header>
 
-<div id="access" role="navigation">
-
-		<?php
-		if( $sa_settings['nav_view'] == 'pills' ) {
-	    wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'menu_class' => 'pills', 'fallback_cb' => false) ); 
-		}; 
-		?>
-	
-		<?php
-		if( $sa_settings['nav_view'] == 'tabs' ) {
-	    wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'menu_class' => 'tabs', 'fallback_cb' => false) ); 
-		}; 
-		?>
-
-</div><!-- #access -->
+		<nav id="access" role="navigation" class="container">
+		
+			<?php
+			if( $sa_settings['nav_view'] == 'pills' ) {
+		    wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'menu_class' => 'pills', 'fallback_cb' => false) ); 
+			}; 
+			?>
+		
+			<?php
+			if( $sa_settings['nav_view'] == 'tabs' ) {
+		    wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'menu_class' => 'tabs', 'fallback_cb' => false) ); 
+			}; 
+			?>
+		</nav><!-- #access -->

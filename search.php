@@ -9,13 +9,11 @@
 
 get_header(); ?>
 
-<div class="row">
-  <div class="span11 columns">
+<section class="row">
+  <article class="span11 columns">
 
 <?php if ( have_posts() ) : ?>
-		<div class="page-header">
-				<h1><?php printf( __( 'Search Results for: %s', 'twentyten' ), '' . get_search_query() . '' ); ?></h1>
-		</div>
+		<h1 class="page-header"><?php printf( __( 'Search Results for: %s', 'twentyten' ), '' . get_search_query() . '' ); ?></h1>
 				<?php
 				/* Run the loop for the search to output the results.
 				 * If you want to overload this in a child theme then include a file
@@ -24,9 +22,7 @@ get_header(); ?>
 				 get_template_part( 'loop', 'search' );
 				?>
 <?php else : ?>
-		<div class="page-header">
-			<h1><?php _e( 'Not Found', 'twentyten' ); ?></h1>
-		</div>
+		<h1 class="page-header"><?php _e( 'Not Found', 'twentyten' ); ?></h1>
 		
 		<div class="alert-message block-message error">
 			<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'twentyten' ); ?></p>
@@ -36,9 +32,9 @@ get_header(); ?>
 		</div>
 <?php endif; ?>
 
-  </div>
-  <div class="span5 columns">
+  </article>
+  <aside class="span5 columns">
 		<?php get_sidebar(); ?>
-  </div>
-</div>
+  </aside>
+</section>
 <?php get_footer(); ?>

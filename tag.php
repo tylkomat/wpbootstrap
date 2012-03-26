@@ -9,13 +9,11 @@
 
 get_header(); ?>
 
-<div class="row">
-  <div class="span11 columns">
-			<div class="page-header">
-				<h1><?php
-					printf( __( 'Tag Archives: %s', 'twentyten' ), '' . single_tag_title( '', false ) . '' );
-				?></h1>
-			</div> <!-- /page-header -->
+<section class="row">
+  <article class="span11 columns">
+			<h1 class="page-header"><?php
+				printf( __( 'Tag Archives: %s', 'twentyten' ), '' . single_tag_title( '', false ) . '' );
+			?></h1>
 
 <?php
 /* Run the loop for the tag archive to output the posts
@@ -25,9 +23,9 @@ get_header(); ?>
  get_template_part( 'loop', 'tag' );
 ?>
 
-  </div>
-  <div class="span5 columns">
+  </article>
+  <aside class="span5 columns">
 		<?php get_sidebar(); ?>
-  </div>
-</div>
+  </aside>
+</section>
 <?php get_footer(); ?>
