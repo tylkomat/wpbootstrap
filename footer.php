@@ -23,8 +23,7 @@
 		?>
 		
 		<?php
-			if( $sa_settings[
-			'iubenda_id'] != '' ) : 
+			if( $sa_settings['iubenda_id'] != '' ) : 
 		?>
 			<a href="http://www.iubenda.com/privacy-policy/<?php echo $sa_settings['iubenda_id']; ?>" class="iubenda-green-xs" id="iubenda-embed" title="Privacy Policy">Privacy Policy (by iubenda)</a>
 			<script type="text/javascript" src="http://cdn.iubenda.com/iubenda.js"></script>

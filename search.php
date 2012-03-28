@@ -34,7 +34,7 @@ get_header(); ?>
 
   </article>
   <aside class="span3 columns">
-		<?php var_dump('test'); get_sidebar(); ?>
+		<?php get_sidebar(); ?>
   </aside>
 </section>
 <?php get_footer(); ?>
