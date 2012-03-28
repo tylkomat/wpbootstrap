@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <section class="row">
-  <article class="span11 columns">
+  <article class="span9 columns">
 
 			<h1 class="page-header"><?php
 				printf( __( 'Category Archives: %s', 'twentyten' ), '' . single_cat_title( '', false ) . '' );
@@ -29,7 +29,7 @@ get_header(); ?>
 				?>
 
   </article>
-  <aside class="span5 columns">
+  <aside class="span3 columns">
 		<?php get_sidebar(); ?>
   </aside>
 </section>

@@ -22,7 +22,7 @@ get_header(); ?>
 ?>
 
 <section class="row">
-  <article class="span11 columns">
+  <article class="span9 columns">
 
 	<h1 class="page-header"><?php printf( __( 'Author Archives: %s', 'twentyten' ), "<a class='url fn n' href='" . get_author_posts_url( get_the_author_meta( 'ID' ) ) . "' title='" . esc_attr( get_the_author() ) . "' rel='me'>" . get_the_author() . "</a>" ); ?></h1>
 
@@ -51,7 +51,7 @@ if ( get_the_author_meta( 'description' ) ) : ?>
 ?>
 
   </article>
-  <aside class="span5 columns">
+  <aside class="span3 columns">
 		<?php get_sidebar(); ?>
   </aside>
 </section>

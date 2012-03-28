@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <section class="row">
-  <article class="span11 columns">
+  <article class="span9 columns">
 
 <?php if ( have_posts() ) : ?>
 		<h1 class="page-header"><?php printf( __( 'Search Results for: %s', 'twentyten' ), '' . get_search_query() . '' ); ?></h1>
@@ -33,7 +33,7 @@ get_header(); ?>
 <?php endif; ?>
 
   </article>
-  <aside class="span5 columns">
+  <aside class="span3 columns">
 		<?php get_sidebar(); ?>
   </aside>
 </section>

@@ -13,7 +13,7 @@ get_header(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 	
-  		<article class="span11 columns" itemscope itemtype="http://schema.org/BlogPosting">
+  		<article class="span9 columns" itemscope itemtype="http://schema.org/BlogPosting">
 			<header>
 					<h1 class="page-header" itemprop="name">
 						<?php the_title(); ?>
@@ -27,7 +27,7 @@ get_header(); ?>
 		
 					<section class="post_content" itemprop="articleBody">
 						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
+						<?php wpbootstrap_link_pages_list(array( 'before' => '<nav class="pagination pagination-centered"><ul>', 'after' => '</ul></nav>')); ?>
 
 					</section>
 
@@ -97,7 +97,7 @@ get_header(); ?>
 
 <?php endwhile; // end of the loop. ?>
 
-  <aside class="span5 columns">
+  <aside class="span3 columns">
 		<?php get_sidebar(); ?>
   </aside>
 

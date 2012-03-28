@@ -478,3 +478,47 @@ function wpbootstrap_scripts() {
 
 add_action('wp_enqueue_scripts', 'wpbootstrap_scripts');
 
+/**
+* extend wp_link_pages to return a list
+* 
+* @param mixed $args
+* @param boolean $echo
+* @return string
+*/
+function wpbootstrap_link_pages_list($args = '', $echo = true){
+	
+	$defaults = array(
+		'echo' => 0,
+		'before' => '<ul>',
+		'after'	=> '</ul>'
+	);
+	
+	$args = wp_parse_args($args, $defaults);
+	
+	$pagesString = wp_link_pages($args);
+	$pagesString = preg_replace('/(<a[^<]+?>.<\/a>)/', '<li>$1</li>', $pagesString);
+	$pagesString = preg_replace('/(>\s+)(\d+)(\s+<li)/', '$1<li class="active"><a href="#">$2</a></li>$3', $pagesString);
+	
+	if($echo === false){
+		
+		return $pagesString;
+	}
+		
+	echo $pagesString;
+}
+
+/**
+* add boostrap active class to the classes of the active menu item
+* @param array $items
+* @return array
+*/
+function wpbootstrap_active_nav_item(array $items){
+	
+	if(in_array('current-menu-item', $items)){
+		
+		$items[] = 'active';
+	}
+	return $items;
+}
+
+add_filter('nav_menu_css_class', 'wpbootstrap_active_nav_item');

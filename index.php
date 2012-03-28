@@ -15,7 +15,7 @@
 
 get_header(); ?>
 <section class="row">
-  <article class="span11 columns">
+  <article class="span9 columns">
 			<?php
 			/* Run the loop to output the posts.
 			 * If you want to overload this in a child theme then include a file
@@ -24,7 +24,7 @@ get_header(); ?>
 			 get_template_part( 'loop', 'index' );
 			?>
   </article>
-  <aside class="span5 columns">
+  <aside class="span3 columns">
 		<?php get_sidebar(); ?>
   </aside>
 </section>

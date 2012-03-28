@@ -100,7 +100,9 @@ if ( ( is_paged() == false && $sa_settings['compact_homepage'] == '1' ) || ( $sa
 						<?php the_excerpt(); ?>
 				<?php else : ?>
 						<?php the_content( __( 'Continue reading &rarr;', 'twentyten' ) ); ?>
-						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
+						<?php 
+							wpbootstrap_link_pages_list(array( 'before' => '<nav class="pagination pagination-centered"><ul>', 'after' => '</ul></nav>'));
+						?>
 				<?php endif; ?>
 			</article>
 
@@ -172,14 +174,14 @@ if ( ( is_paged() == false && $sa_settings['compact_homepage'] == '1' ) || ( $sa
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-	<div class="pagination">
-		<ul>
-			<li class="prev">
+	<nav>
+		<ul class="pager">
+			<li class="previous">
 				<?php next_posts_link( __( '&larr; Older posts', 'twentyten' ) ); ?>
 			</li>
 			<li class="next">
 				<?php previous_posts_link( __( 'Newer posts &rarr;', 'twentyten' ) ); ?>
 			</li>
 		</ul>
-	</div>
+	</nav>
 <?php endif; ?>

@@ -79,13 +79,13 @@
 		
 			<?php
 			if( $sa_settings['nav_view'] == 'pills' ) {
-		    wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'menu_class' => 'pills', 'fallback_cb' => false) ); 
+		    wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'menu_class' => 'nav nav-pills', 'fallback_cb' => false) ); 
 			}; 
 			?>
 		
 			<?php
 			if( $sa_settings['nav_view'] == 'tabs' ) {
-		    wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'menu_class' => 'tabs', 'fallback_cb' => false) ); 
+		    wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'menu_class' => 'nav nav-tabs', 'fallback_cb' => false) ); 
 			}; 
 			?>
 		</nav><!-- #access -->

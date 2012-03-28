@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <section class="row">
-  <article class="span11 columns">
+  <article class="span9 columns">
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
@@ -90,7 +90,7 @@ get_header(); ?>
 						<?php if ( !empty( $post->post_excerpt ) ) the_excerpt(); ?>
 
 <?php the_content( __( 'Continue reading &rarr;', 'twentyten' ) ); ?>
-<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
+<?php wpbootstrap_link_pages_list(array( 'before' => '<nav class="pagination pagination-centered"><ul>', 'after' => '</ul></nav>')); ?>
 
 						<?php twentyten_posted_in(); ?>
 						<?php edit_post_link( __( 'Edit', 'twentyten' ), ' ', '' ); ?>
@@ -100,7 +100,7 @@ get_header(); ?>
 <?php endwhile; ?>
 
   </article>
-  <aside class="span5 columns">
+  <aside class="span3 columns">
 		<?php get_sidebar(); ?>
   </aside>
 </section>
