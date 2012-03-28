@@ -26,16 +26,16 @@
 
 <?php /* If there are no posts to display, such as an empty archive page */ ?>
 <?php if ( ! have_posts() ) : ?>
-		
+	<article>
 		<h1 class="page-header"><?php _e( 'Not Found', 'twentyten' ); ?></h1>
 		
 		<div class="alert-message block-message error">
 			<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'twentyten' ); ?></p>
-			<div class="alert-actions"
+			<div class="alert-actions">
 				<?php get_search_form(); ?>
 			</div>
 		</div>
-
+	</article>
 <?php endif; ?>
 
 <?php 
@@ -151,9 +151,6 @@ if ( ( is_paged() == false && $sa_settings['compact_homepage'] == '1' ) || ( $sa
 					<?php endif; ?>
 
 				</div> <!-- /well -->
-
-
-
 
 		<?php comments_template( '', true ); ?>
 
