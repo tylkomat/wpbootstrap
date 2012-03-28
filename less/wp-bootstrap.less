@@ -1,9 +1,11 @@
-/* wp-bootstrap-less
+/*!
+ * wp-bootstrap-less
  * Custom styles for the Wordpress theme
- * ------------------------------------------------------------- */
+ * ------------------------------------------------------------- 
+ */
 
 // Core variables and mixins
-@import "variables.less";
+@import "bootstrap/less/bootstrap.less";
 @import "responsive.less";
 
 // ARTICLES
@@ -14,14 +16,14 @@ article + article {
 }
 
 .post_content {
-	padding: ( @baseline * 0.7 ) 0 @baseline 0;
+	padding: ( @baseLineHeight * 0.7 ) 0 @baseLineHeight 0;
 		
 		h2 {
-			margin-top: @baseline;
+			margin-top: @baseLineHeight;
 		}
 		
 		h3 {
-			margin-bottom: @baseline * 0.5;
+			margin-bottom: @baseLineHeight * 0.5;
 		}
 		
 		img.box {
@@ -36,7 +38,7 @@ article + article {
 	}
 	
 	h2 {
-		font-size: @basefont + 2;
+		font-size: @baseFontSize + 2;
 		margin-bottom: 0;
 	}
 	
@@ -76,7 +78,7 @@ article + article {
 .form-submit {
 	#submit {
 		.btn();
-		.primary();
+		//.primary();
 	}
 }
 
@@ -86,7 +88,7 @@ article + article {
 }
 
 #comments-title {
-	margin-bottom: @baseline * 0.5;
+	margin-bottom: @baseLineHeight * 0.5;
 }
 
 // FORMS
@@ -143,7 +145,7 @@ footer {
 		text-decoration: none;
 			&:hover:after {
 				content: " get to the blog home";
-				font-size: @basefont;
+				font-size: @baseFontSize;
 				color: @gray;
 				font-weight: normal;
 			}
@@ -160,7 +162,7 @@ footer {
 
 .sidebar {
 	h3 {
-		margin-bottom: @baseline * 0.5;
+		margin-bottom: @baseLineHeight * 0.5;
 	}
 	> li {
 		margin-bottom: 20px;
