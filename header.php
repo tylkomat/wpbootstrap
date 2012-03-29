@@ -70,7 +70,7 @@
 				<?php endif; ?>
 		
 				<h1 itemprop="name">
-					<a href="<?php echo home_url( '/' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+					<a href="<?php echo home_url( '/' ); ?>" rel="home" data-footnote="go to the blog home"><?php bloginfo( 'name' ); ?></a>
 				</h1>
 				<p itemprop="description"><?php bloginfo( 'description' ); ?></p>
 		</header>

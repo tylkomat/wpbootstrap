@@ -710,7 +710,7 @@ article+article{margin-top:80px;}
 .pills li.current_page_item a{background:#0088cc;color:#fff;text-shadow:0 1px 1px rgba(0, 0, 0, 0.25);}
 .tabs li.current_page_item a{background-color:#fff;padding:0 14px;border:1px solid #ccc;border-bottom:0;color:#555555;}
 footer{margin-bottom:40px;}
-.hero_unit h1 a{text-decoration:none;}.hero_unit h1 a:hover:after{content:" get to the blog home";font-size:13px;color:#555555;font-weight:normal;}
+.hero-unit h1 a{text-decoration:none;}.hero-unit h1 a:hover:after{content:attr(data-footnote);font-size:13px;color:#555555;font-weight:normal;}
 .box_count{float:left;margin-right:30px;}.box_count:first-child{margin-right:15px;}
 .sidebar h3{margin-bottom:9px;}
 .sidebar>li{margin-bottom:20px;}
