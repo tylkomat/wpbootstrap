@@ -33,10 +33,10 @@
 			if( $sa_settings['credits_footer'] == true ) : 
 		?>
 	
-			<div style="float: right">		
-					<a href="https://github.com/tylkomat/wpbootstrap">Bootstrap for Wordpress</a> with <a href="http://schema.org">Schema.org</a> is a theme based on the <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap toolkit</a>
+			<div class="span12" style="text-align: center">
+					<a href="https://github.com/tylkomat/wpbootstrap" target="_blank">Bootstrap for Wordpress</a> with <a href="http://schema.org" target="_blank">Schema.org</a> is a theme based on the <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap toolkit</a>
 					- 
-					<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">Proudly powered by WordPress </a>
+					<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator" target="_blank">Proudly powered by WordPress </a>
 			</div>
 		
 		<?php endif; ?>
