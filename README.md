@@ -1,13 +1,14 @@
-# Bootstrap for Wordpress
-Bootstrap Wordpress Theme based on the Twitter Bootstrap toolkit
+# Bootstrap for Wordpress with Schema.org Annotation
+Based in a fork of Bootstrap Wordpress Theme based on the Twitter Bootstrap toolkit
 
 ## Demo
-For the demo, visit the [wpbootstrap website](http://wpbootstrap.iubenda.com)
+For the demo of the original, visit the [wpbootstrap website](http://wpbootstrap.iubenda.com)
 
 ## Authors
-The author is [Andrea Giannangelo](http://twitter.com/Facens), founder of [iubenda](http://www.iubenda.com)
+Matthias Tylkowski (http://twitter.com/Tylkomat, http://tylkowski.net)
 
 ## Credits
+* Andrea Giannangelo (http://twitter.com/Facens), founder of [iubenda](http://www.iubenda.com)
 * @mdo and @fat, authors of the Twitter Bootstrap toolkit
 * The Starkers theme, used as base
 
